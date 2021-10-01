@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.igloo.wonseok'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11' //자바 11버전이라는 뜻
+
+repositories {
+	mavenCentral() //다운로드받을 라이브러리들. 여기서 받아라 라는 뜻. 필요시 다른 URL입력 가능
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //부트에서 내가 선택한 옵션
+	implementation 'org.springframework.boot:spring-boot-starter-web' //부트에서 내가 선택한 옵션
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' //테스트 라이브러리
+}
+
+test {
+	useJUnitPlatform()
+}

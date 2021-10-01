@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://thymeleaf.org"> <!-- 타임리프 템플릿 엔진을 쓰겠다 -->
+<head>
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p th:text="'data: ' + ${data}"> 안녕하세요. 손님</p> <!-- 타임리프 문법. model에 들어있던 data를 출력함.
+                                                    뒤의 '안녕하세요 손님'은 실제 서버기동해서 들어오면 보이지않음. 디버깅(개발)용. -->
+</body>
+</html>
